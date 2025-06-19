@@ -1,0 +1,188 @@
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.contamination-popup {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 400px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.contamination-popup h3 {
+  font-size: 1.2rem;
+  margin: 0 0 5px 0;
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.contamination-popup h4 {
+  margin: 15px 0 8px 0;
+  color: #1B4965;
+}
+
+.metal-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(120px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.metal-card {
+  transition: all 0.2s ease;
+}
+
+.metal-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.metal-card h5 {
+  margin: 0 0 5px 0;
+  color: #1B4965;
+}
+
+.class-high {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.class-medium {
+  color: #f39c12;
+  font-weight: bold;
+}
+
+.class-low {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.water-quality {
+  margin: 15px 0;
+  padding: 10px;
+  background: #f0f8ff;
+  border-radius: 4px;
+}
+
+.quality-row {
+  display: flex;
+  gap: 20px;
+}
+
+.quality-row > div {
+  flex: 1;
+}
+
+.stats-summary {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px dashed #ccc;
+  font-size: 0.9em;
+}
+
+.stats-summary p {
+  margin: 3px 0;
+}
+
+.map-legend {
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+  line-height: 1.5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.map-legend h4 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.contamination-popup {
+  min-width: 250px;
+}
+
+.metal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.metal-card {
+  padding: 5px;
+  border-radius: 3px;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+.water-quality {
+  margin-top: 10px;
+}
+
+.quality-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.class-high { color: #e74c3c; font-weight: bold; }
+.class-medium { color: #f39c12; font-weight: bold; }
+.class-low { color: #2ecc71; font-weight: bold; }
+
+.custom-layer-control {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.control-section {
+  margin-bottom: 15px;
+}
+
+.control-section h4 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.layer-toggle {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.layer-toggle input {
+  margin-right: 8px;
+}
+
+.layer-toggle label {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.leaflet-div-icon {
+  background: transparent;
+  border: none;
+}
+
+.leaflet-marker-icon {
+  background-image: url('data:image/png;base64,...');
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .custom-layer-control {
+    max-width: 200px;
+    font-size: 12px;
+  }
+}

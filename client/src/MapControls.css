@@ -1,0 +1,56 @@
+.app {
+  position: relative;
+}
+
+.map-controls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.map-popup {
+  font-family: Arial, sans-serif;
+  max-width: 300px;
+}
+
+.map-popup h3 {
+  margin: 0 0 5px 0;
+  color: #2c3e50;
+}
+
+.metal-readings {
+  margin: 10px 0;
+}
+
+.metal-reading {
+  padding: 5px;
+  margin: 3px 0;
+  border-radius: 3px;
+}
+
+.metal-reading.high {
+  background-color: #ffdddd;
+}
+
+.metal-reading.medium {
+  background-color: #fff3d6;
+}
+
+.metal-reading.low {
+  background-color: #e8f5e9;
+}
+
+.water-quality-readings {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px dashed #eee;
+}
+
+.quality-reading {
+  margin: 5px 0;
+}

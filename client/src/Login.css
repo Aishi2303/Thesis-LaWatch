@@ -1,0 +1,258 @@
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+.login-page {
+  width: 100%;
+  background-color: #f8f9fa;
+  height: calc(100vh - 100px); 
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.login-container {
+  display: flex;
+  max-width: 100%;
+  margin: 0 auto;
+  width: calc(100% - 40px);
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.login-left {
+  flex: 1;
+  padding: 4rem;
+  background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #FFFFFF;
+}
+
+.login-bold {
+  font-weight: 700;
+}
+
+.login-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.login-right {
+  flex: 1;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.login-form {
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-prompt {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #666;
+}
+
+.signup-link {
+  color: #3498db;
+  margin-left: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+.form-title {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+/* Add to Login.css */
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.half-width {
+  flex: 1;
+}
+
+.input-hint {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+.login-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.login-button:hover {
+  background-color: #1a252f;
+}
+
+.login-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.login-link {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.login-link:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.login-link-separator {
+  color: #ddd;
+}
+
+.error-message {
+  color: #e74c3c;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fadbd8;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .form-title {
+    font-size: 1.2rem;
+  }
+
+  .login-left, .login-right {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-page {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .login-container {
+    flex-direction: column;
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .login-left, .login-right {
+    width: 100%;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .login-left {
+    order: 1;
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    color: white;
+  }
+
+  .login-right {
+    order: 2;
+    padding-top: 0;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .form-group input {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .login-button {
+    width: 100%;
+  }
+
+  .login-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
