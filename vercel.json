@@ -6,29 +6,27 @@
       "use": "@vercel/static-build",
       "config": {
         "distDir": "build",
-        "env": {
-          "REACT_APP_API_URL": "/api" 
-        }
+        "installCommand": "cd client && npm install",
+        "buildCommand": "cd client && npm run build"
       }
     },
     {
       "src": "server/server.js",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["server/**"]
+        "includeFiles": ["server/**"],
+        "installCommand": "cd server && npm install"
       }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "server/server.js",
-      "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+      "dest": "server/server.js"
     },
     {
       "src": "/(.*)",
-      "dest": "client/$1",
-      "continue": true
+      "dest": "client/$1"
     }
   ]
 }
