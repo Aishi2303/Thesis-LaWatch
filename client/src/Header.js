@@ -35,7 +35,7 @@ const Header = () => {
             <nav className={`nav ${menuOpen ? 'open' : ''}`}>
                 <ul className="nav-list">
                     <li className="nav-item"><Link to="/" onClick={() => setMenuOpen(false)}>MAIN</Link></li>
-                    <li className="nav-item"><Link to="/maps" onClick={() => setMenuOpen(false)}>MAPS</Link></li>
+                    <li className="nav-item"><Link to="/maps" onClick={() => setMenuOpen(false)}>MAPSss</Link></li>
                     <li className="nav-item"><Link to="/ldb" onClick={() => setMenuOpen(false)}>LAGUNA DE BAY</Link></li>
                     <li className="nav-item"><Link to="/about" onClick={() => setMenuOpen(false)}>ABOUT</Link></li>
                     <li className="nav-item"><Link to="/login" onClick={() => setMenuOpen(false)}>LOG IN</Link></li>
