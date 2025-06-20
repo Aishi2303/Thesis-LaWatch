@@ -1,9 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 # Environment files
-.env
-*.env
-server/.env
-client/.env*
+# Frontend env files (React/Vite/etc.)
+/client/.env.development
+/client/.env.production
+
+# Backend env files (Node.js/Express/etc.)
+/server/.env
 
 # System files
 .DS_Store
