@@ -38,18 +38,16 @@ const Footer = () => {
             <li>
               <FaMapMarkerAlt className="contact-icon" /> 
               <address>
-                Laguna Lake Development Authority<br />
-                LLDA Building, National Ecology Center, East Avenue, Diliman, <br />
-                 Quezon City, Philippines
+                LaWatch Team<br />
+                Far Eastern University Alabang, C26Q+545 Wood District, Corporate Woods cor. <br />
+                South Corporate Avenues, Filinvest City, Muntinlupa City, 1781 Metro Manila
               </address>
             </li>
             <li>
-              <FaPhone className="contact-icon" /> (02) 8376-5430, (02) 8376-4044, <br />
-              (02) 8332-2341, (02) 8376-4039, <br />
-              (02) 8332-2353
+              <FaPhone className="contact-icon" /> 0975 460 1367 <br />
             </li>
             <li>
-              <FaEnvelope className="contact-icon" /> info@llda.gov.ph
+              <FaEnvelope className="contact-icon" /> lawatch.help@gmail.com
             </li>
           </ul>
         </div>
