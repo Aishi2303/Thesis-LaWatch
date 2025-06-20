@@ -11,7 +11,7 @@ console.log('DB URL:', process.env.DATABASE_URL ? '✅ Loaded' : '❌ Missing');
 const app = express();
 
 const corsOptions = {
-  origin: ['http://localhost:3000'], // Update with production URL when deployed
+  origin: ['http://localhost:3000', https://lawatch.vercel.app], // Update with production URL when deployed
   credentials: true,
 };
 app.use(cors(corsOptions));
