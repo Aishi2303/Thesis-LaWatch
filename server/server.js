@@ -11,10 +11,32 @@ console.log('DB URL:', process.env.DATABASE_URL ? '✅ Loaded' : '❌ Missing');
 const app = express();
 
 const corsOptions = {
-  origin: ['http://localhost:3000'], // Update with production URL when deployed
+  origin: function (origin, callback) {
+    //Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    const allowedOrigins = [
+      'https://lawatch.vercel.app',
+      'https://lawatch-git-main-aishi2303.vercel.app',
+      'http://localhost:3000'
+    ];
+    
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
   credentials: true,
+  optionsSuccessStatus: 200 
 };
+
 app.use(cors(corsOptions));
+
+// Handle preflight requests
+app.options('*', cors(corsOptions));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
